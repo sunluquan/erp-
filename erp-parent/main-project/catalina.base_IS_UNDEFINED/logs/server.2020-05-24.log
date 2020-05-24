@@ -1,0 +1,363 @@
+2020-05-24 12:04:02.360 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-05-24 12:04:04.068 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.slq.mapper.production.MaterialDesignDetailMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2020-05-24 12:04:07.012 [restartedMain] DEBUG org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-05-24 12:04:07.013 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8979 ms
+2020-05-24 12:04:08.099 [restartedMain] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration - No spring.application.name found, defaulting to 'application'
+2020-05-24 12:04:08.107 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-05-24 12:04:08.118 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-05-24 12:04:08.371 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-05-24 12:04:08.505 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 192 mappings in 'requestMappingHandlerMapping'
+2020-05-24 12:04:08.549 [restartedMain] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-05-24 12:04:08.565 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-05-24 12:04:08.615 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-05-24 12:04:10.725 [restartedMain] DEBUG o.s.w.s.server.standard.ServerEndpointExporter - Registering @ServerEndpoint class: class com.slq.websocket.WebSocketServer
+2020-05-24 12:05:30.717 [http-nio-8011-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-24 12:05:30.718 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2020-05-24 12:05:30.743 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-05-24 12:05:30.744 [http-nio-8011-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 26 ms
+2020-05-24 12:05:30.836 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/verificationImg", parameters={}
+2020-05-24 12:05:30.849 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.SystemController#responseVerificationImg(HttpServletRequest, HttpServletResponse)
+2020-05-24 12:05:32.008 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 12:05:38.834 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/login", parameters={masked}
+2020-05-24 12:05:38.835 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.SystemController#login(User, String)
+2020-05-24 12:05:40.140 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 12:05:40.142 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=登录成功!, gotoPage=false, url=null, data=ActiveUser(user=User(id=1 (truncated)...]
+2020-05-24 12:05:40.196 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 12:05:40.237 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/common/getTreeMenus", parameters={}
+2020-05-24 12:05:40.238 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.api.CommonController#getTreeMenus()
+2020-05-24 12:05:40.733 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 12:05:40.735 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[TreeMenu(id=1, title=系統管理 (truncated)...]
+2020-05-24 12:05:40.751 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 12:05:46.976 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/warehouse/getAllHouse", parameters={}
+2020-05-24 12:05:46.977 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehouseController#getAllHouse()
+2020-05-24 12:05:47.036 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 12:05:47.036 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Storehouse(sid=1, storeNa (truncated)...]
+2020-05-24 12:05:47.041 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 12:05:50.793 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/stocks/getStockslist", parameters={}
+2020-05-24 12:05:50.794 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.StockController#getStocks()
+2020-05-24 12:05:50.806 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 12:05:50.807 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Stock(id=null, stockId=nu (truncated)...]
+2020-05-24 12:05:50.812 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 12:06:22.313 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/stocks/getStockslist", parameters={}
+2020-05-24 12:06:22.315 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.StockController#getStocks()
+2020-05-24 12:06:22.320 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 12:06:22.321 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Stock(id=null, stockId=nu (truncated)...]
+2020-05-24 12:06:22.322 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:04.147 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/noLogin;JSESSIONID=bda43c16-e207-429c-840e-9dafaa1e088a", parameters={}
+2020-05-24 15:46:04.150 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.SystemController#noLogin()
+2020-05-24 15:46:04.153 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:04.153 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=302, message=未登录!, gotoPage=true, url=/login.html, data=null)]
+2020-05-24 15:46:04.153 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:05.588 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/login", parameters={masked}
+2020-05-24 15:46:05.589 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.SystemController#login(User, String)
+2020-05-24 15:46:05.688 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:05.688 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=登录成功!, gotoPage=false, url=null, data=ActiveUser(user=User(id=1 (truncated)...]
+2020-05-24 15:46:05.691 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:06.037 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/common/getTreeMenus", parameters={}
+2020-05-24 15:46:06.038 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.api.CommonController#getTreeMenus()
+2020-05-24 15:46:06.462 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:06.463 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[TreeMenu(id=1, title=系統管理 (truncated)...]
+2020-05-24 15:46:06.466 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:09.774 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/product/getNotConfigureInventoryProducts", parameters={}
+2020-05-24 15:46:09.774 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.common1.ProductController#getNotConfigureInventoryProducts()
+2020-05-24 15:46:09.867 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:09.867 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Product(id=17, product_id (truncated)...]
+2020-05-24 15:46:09.883 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:13.588 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/warehouse/getByid/18", parameters={}
+2020-05-24 15:46:13.589 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/product/getById/18", parameters={}
+2020-05-24 15:46:13.595 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehouseController#byid(Integer)
+2020-05-24 15:46:13.613 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:13.614 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Storehouse(sid=3, storeNa (truncated)...]
+2020-05-24 15:46:13.615 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:13.628 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.common1.ProductController#getById(Integer)
+2020-05-24 15:46:13.737 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:13.738 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Product(id=18, product_id= (truncated)...]
+2020-05-24 15:46:13.740 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:20.327 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/product/getById/18", parameters={}
+2020-05-24 15:46:20.330 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.common1.ProductController#getById(Integer)
+2020-05-24 15:46:20.330 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:20.334 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Product(id=18, product_id= (truncated)...]
+2020-05-24 15:46:20.335 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:20.646 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/warehouse/getByid/18", parameters={}
+2020-05-24 15:46:20.647 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehouseController#byid(Integer)
+2020-05-24 15:46:20.660 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:20.660 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Storehouse(sid=3, storeNa (truncated)...]
+2020-05-24 15:46:20.664 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:32.965 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/search", parameters={}
+2020-05-24 15:46:32.966 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#search()
+2020-05-24 15:46:32.985 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:32.985 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[])]
+2020-05-24 15:46:32.985 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:36.202 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/product/getNotConfigureInventoryProducts", parameters={}
+2020-05-24 15:46:36.205 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.common1.ProductController#getNotConfigureInventoryProducts()
+2020-05-24 15:46:36.218 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:36.218 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Product(id=17, product_id (truncated)...]
+2020-05-24 15:46:36.220 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:39.035 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/search", parameters={}
+2020-05-24 15:46:39.038 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#search()
+2020-05-24 15:46:39.045 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:39.045 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[])]
+2020-05-24 15:46:39.045 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:40.259 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/selectSafetyStocks", parameters={}
+2020-05-24 15:46:40.262 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#select()
+2020-05-24 15:46:40.274 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:40.274 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Safetystock(id=14, safety (truncated)...]
+2020-05-24 15:46:40.280 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:46:48.573 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/safetystock/selectStockChange", parameters={}
+2020-05-24 15:46:48.575 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#select2()
+2020-05-24 15:46:48.585 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:46:48.586 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Safetystock(id=14, safety (truncated)...]
+2020-05-24 15:46:48.587 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:47:09.841 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/product/getNotConfigureInventoryProducts", parameters={}
+2020-05-24 15:47:09.842 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.common1.ProductController#getNotConfigureInventoryProducts()
+2020-05-24 15:47:09.854 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:47:09.854 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Product(id=17, product_id (truncated)...]
+2020-05-24 15:47:09.854 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:47:19.266 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/selectSafetyStocks", parameters={}
+2020-05-24 15:47:19.267 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#select()
+2020-05-24 15:47:19.275 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:47:19.275 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Safetystock(id=14, safety (truncated)...]
+2020-05-24 15:47:19.276 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:47:21.676 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/getAllsafetyById/8fadade9a4a1ec1f5975bfa", parameters={}
+2020-05-24 15:47:21.682 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#getAllsafetyById(String)
+2020-05-24 15:47:21.693 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:47:21.694 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Safetystock(id=19, safetys (truncated)...]
+2020-05-24 15:47:21.695 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:48:04.575 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/safetystock/selectStockChange", parameters={}
+2020-05-24 15:48:04.575 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#select2()
+2020-05-24 15:48:04.623 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:48:04.623 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Safetystock(id=14, safety (truncated)...]
+2020-05-24 15:48:04.632 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:48:10.243 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/getAllsafetyById/8fadade9a4a1ec1f5975bfa", parameters={}
+2020-05-24 15:48:10.248 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#getAllsafetyById(String)
+2020-05-24 15:48:10.277 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:48:10.277 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Safetystock(id=19, safetys (truncated)...]
+2020-05-24 15:48:10.279 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:48:10.565 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/warehouse/getByid/", parameters={}
+2020-05-24 15:48:10.572 [http-nio-8011-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-05-24 15:48:10.614 [http-nio-8011-exec-10] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-05-24 15:48:10.614 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-05-24 15:48:10.625 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2020-05-24 15:48:10.626 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-05-24 15:48:10.639 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:48:10.639 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sun May 24 15:48:10 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-05-24 15:48:10.648 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-05-24 15:56:02.534 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/getAllsafetyById/8fadade9a4a1ec1f5975bfa", parameters={}
+2020-05-24 15:56:02.535 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/warehouse/getByid/", parameters={}
+2020-05-24 15:56:02.537 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#getAllsafetyById(String)
+2020-05-24 15:56:02.537 [http-nio-8011-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-05-24 15:56:02.580 [http-nio-8011-exec-2] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-05-24 15:56:02.580 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-05-24 15:56:02.582 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2020-05-24 15:56:02.583 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-05-24 15:56:02.584 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:56:02.584 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sun May 24 15:56:02 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-05-24 15:56:02.588 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-05-24 15:56:02.675 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:56:02.675 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Safetystock(id=19, safetys (truncated)...]
+2020-05-24 15:56:02.676 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:56:20.935 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/common/getTreeMenus", parameters={}
+2020-05-24 15:56:20.937 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.api.CommonController#getTreeMenus()
+2020-05-24 15:56:21.195 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:56:21.196 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[TreeMenu(id=1, title=系統管理 (truncated)...]
+2020-05-24 15:56:21.198 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:56:21.617 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/safetystock/selectStockChange", parameters={}
+2020-05-24 15:56:21.617 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/getAllsafetyById/8fadade9a4a1ec1f5975bfa", parameters={}
+2020-05-24 15:56:21.617 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#select2()
+2020-05-24 15:56:21.617 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/warehouse/getByid/", parameters={}
+2020-05-24 15:56:21.619 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#getAllsafetyById(String)
+2020-05-24 15:56:21.620 [http-nio-8011-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-05-24 15:56:21.624 [http-nio-8011-exec-8] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-05-24 15:56:21.625 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-05-24 15:56:21.626 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2020-05-24 15:56:21.627 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-05-24 15:56:21.628 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:56:21.629 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sun May 24 15:56:21 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-05-24 15:56:21.630 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-05-24 15:56:21.671 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:56:21.671 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Safetystock(id=14, safety (truncated)...]
+2020-05-24 15:56:21.673 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:56:21.680 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:56:21.680 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Safetystock(id=19, safetys (truncated)...]
+2020-05-24 15:56:21.682 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:58:52.186 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/getAllsafetyById/8fadade9a4a1ec1f5975bfa", parameters={}
+2020-05-24 15:58:52.188 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#getAllsafetyById(String)
+2020-05-24 15:58:52.229 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:58:52.230 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/warehouse/getByid/", parameters={}
+2020-05-24 15:58:52.230 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Safetystock(id=19, safetys (truncated)...]
+2020-05-24 15:58:52.231 [http-nio-8011-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-05-24 15:58:52.232 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:58:52.235 [http-nio-8011-exec-10] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-05-24 15:58:52.235 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-05-24 15:58:52.236 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2020-05-24 15:58:52.236 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-05-24 15:58:52.237 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:58:52.237 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sun May 24 15:58:52 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-05-24 15:58:52.238 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-05-24 15:59:18.749 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/common/getTreeMenus", parameters={}
+2020-05-24 15:59:18.751 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.api.CommonController#getTreeMenus()
+2020-05-24 15:59:19.001 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:59:19.004 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[TreeMenu(id=1, title=系統管理 (truncated)...]
+2020-05-24 15:59:19.007 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:59:19.366 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/safetystock/selectStockChange", parameters={}
+2020-05-24 15:59:19.366 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#select2()
+2020-05-24 15:59:19.366 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/getAllsafetyById/8fadade9a4a1ec1f5975bfa", parameters={}
+2020-05-24 15:59:19.368 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#getAllsafetyById(String)
+2020-05-24 15:59:19.381 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:59:19.381 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Safetystock(id=14, safety (truncated)...]
+2020-05-24 15:59:19.382 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:59:19.387 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:59:19.388 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Safetystock(id=19, safetys (truncated)...]
+2020-05-24 15:59:19.389 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 15:59:19.676 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/warehouse/getByid/", parameters={}
+2020-05-24 15:59:19.678 [http-nio-8011-exec-3] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-05-24 15:59:19.681 [http-nio-8011-exec-3] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-05-24 15:59:19.681 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-05-24 15:59:19.681 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2020-05-24 15:59:19.683 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-05-24 15:59:19.684 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 15:59:19.684 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sun May 24 15:59:19 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-05-24 15:59:19.684 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-05-24 16:04:58.111 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/search", parameters={}
+2020-05-24 16:04:58.113 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#search()
+2020-05-24 16:04:58.147 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:04:58.147 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[])]
+2020-05-24 16:04:58.147 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:06:02.466 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/product/getNotConfigureInventoryProducts", parameters={}
+2020-05-24 16:06:02.467 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.common1.ProductController#getNotConfigureInventoryProducts()
+2020-05-24 16:06:02.513 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:06:02.514 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Product(id=17, product_id (truncated)...]
+2020-05-24 16:06:02.522 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:06:03.143 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/safetystock/selectSafetyStocks", parameters={}
+2020-05-24 16:06:03.143 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#select()
+2020-05-24 16:06:03.151 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:06:03.152 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Safetystock(id=14, safety (truncated)...]
+2020-05-24 16:06:03.157 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:06:15.677 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/safetystock/selectStockChange", parameters={}
+2020-05-24 16:06:15.677 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.SafetystockController#select2()
+2020-05-24 16:06:15.689 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:06:15.689 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Safetystock(id=14, safety (truncated)...]
+2020-05-24 16:06:15.689 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:06:24.024 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/gather/gatherScheduling", parameters={}
+2020-05-24 16:06:24.025 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectScheduling()
+2020-05-24 16:06:24.052 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:06:24.052 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=null, gatherId= (truncated)...]
+2020-05-24 16:06:24.058 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:06:44.914 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getSchedulingid/RK20200521000009", parameters={}
+2020-05-24 16:06:44.916 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectid(String)
+2020-05-24 16:06:44.922 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:06:44.923 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=12, gatherId=RK (truncated)...]
+2020-05-24 16:06:44.924 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:06:55.571 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getGatherSafetystock/CP20200511000002", parameters={}
+2020-05-24 16:06:55.572 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/StorehousesGather/CP20200511000002", parameters={}
+2020-05-24 16:06:55.572 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#getDataByid(String)
+2020-05-24 16:06:55.573 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectStorehousesGather(String)
+2020-05-24 16:06:55.587 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:06:55.587 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Gather(id=12, gatherId=RK2 (truncated)...]
+2020-05-24 16:06:55.591 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:06:55.592 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Storehouse(sid=1, storeNa (truncated)...]
+2020-05-24 16:06:55.592 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:06:55.593 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:07:24.867 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getSchedulingid/RK20200521000009", parameters={}
+2020-05-24 16:07:24.868 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectid(String)
+2020-05-24 16:07:24.877 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:07:24.878 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=12, gatherId=RK (truncated)...]
+2020-05-24 16:07:24.880 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:07:55.795 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/stocks/getStockslist", parameters={}
+2020-05-24 16:07:55.795 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.StockController#getStocks()
+2020-05-24 16:07:55.801 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:07:55.802 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Stock(id=null, stockId=nu (truncated)...]
+2020-05-24 16:07:55.804 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:10:27.846 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/gather/gatherRegistrationList", parameters={}
+2020-05-24 16:10:27.847 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectRegData()
+2020-05-24 16:10:27.878 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:10:27.878 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[])]
+2020-05-24 16:10:27.880 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:10:28.961 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/gather/gatherRegistrationList", parameters={}
+2020-05-24 16:10:28.961 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectRegData()
+2020-05-24 16:10:28.968 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:10:28.968 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[])]
+2020-05-24 16:10:28.969 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:10:30.351 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/gather/selectRegistration", parameters={}
+2020-05-24 16:10:30.352 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectRegistration()
+2020-05-24 16:10:30.361 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:10:30.362 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=null, gatherId= (truncated)...]
+2020-05-24 16:10:30.364 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:10:42.168 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/byIdAll/RK20200521000009", parameters={}
+2020-05-24 16:10:42.169 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#getGatherByIdAll(String)
+2020-05-24 16:10:42.259 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:10:42.260 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Gather(id=12, gatherId=RK2 (truncated)...]
+2020-05-24 16:10:42.263 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:13:29.821 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/gather/gatherScheduling", parameters={}
+2020-05-24 16:13:29.821 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectScheduling()
+2020-05-24 16:13:29.852 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:13:29.853 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=null, gatherId= (truncated)...]
+2020-05-24 16:13:29.854 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:13:30.778 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getSchedulingid/RK20200521000009", parameters={}
+2020-05-24 16:13:30.780 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectid(String)
+2020-05-24 16:13:30.787 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:13:30.787 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=12, gatherId=RK (truncated)...]
+2020-05-24 16:13:30.788 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:14:40.963 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getSchedulingid/RK20200521000009", parameters={}
+2020-05-24 16:14:40.965 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectid(String)
+2020-05-24 16:14:40.991 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:14:40.992 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=12, gatherId=RK (truncated)...]
+2020-05-24 16:14:40.993 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:16:22.970 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getSchedulingid/RK20200521000009", parameters={}
+2020-05-24 16:16:22.971 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectid(String)
+2020-05-24 16:16:22.996 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:16:22.996 [http-nio-8011-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=12, gatherId=RK (truncated)...]
+2020-05-24 16:16:22.998 [http-nio-8011-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:17:24.172 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getSchedulingid/RK20200521000009", parameters={}
+2020-05-24 16:17:24.176 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectid(String)
+2020-05-24 16:17:24.204 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:17:24.205 [http-nio-8011-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=12, gatherId=RK (truncated)...]
+2020-05-24 16:17:24.217 [http-nio-8011-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:18:38.489 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getGatherSafetystock/CP20200511000002", parameters={}
+2020-05-24 16:18:38.489 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/StorehousesGather/CP20200511000002", parameters={}
+2020-05-24 16:18:38.489 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#getDataByid(String)
+2020-05-24 16:18:38.490 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectStorehousesGather(String)
+2020-05-24 16:18:38.521 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:18:38.522 [http-nio-8011-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Gather(id=12, gatherId=RK2 (truncated)...]
+2020-05-24 16:18:38.523 [http-nio-8011-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:18:38.527 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:18:38.528 [http-nio-8011-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Storehouse(sid=1, storeNa (truncated)...]
+2020-05-24 16:18:38.528 [http-nio-8011-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:18:44.814 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getSchedulingid/RK20200521000009", parameters={}
+2020-05-24 16:18:44.816 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectid(String)
+2020-05-24 16:18:44.829 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:18:44.829 [http-nio-8011-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=12, gatherId=RK (truncated)...]
+2020-05-24 16:18:44.830 [http-nio-8011-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:18:50.629 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getGatherSafetystock/YCL20200511000002", parameters={}
+2020-05-24 16:18:50.631 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#getDataByid(String)
+2020-05-24 16:18:50.643 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:18:50.643 [http-nio-8011-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=Gather(id=12, gatherId=RK2 (truncated)...]
+2020-05-24 16:18:50.643 [http-nio-8011-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:18:50.934 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/StorehousesGather/YCL20200511000002", parameters={}
+2020-05-24 16:18:50.935 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectStorehousesGather(String)
+2020-05-24 16:18:50.942 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:18:50.942 [http-nio-8011-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Storehouse(sid=3, storeNa (truncated)...]
+2020-05-24 16:18:50.942 [http-nio-8011-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:18:52.914 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/gather/getSchedulingid/RK20200521000009", parameters={}
+2020-05-24 16:18:52.915 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.slq.controller.warehouse.WarehousingController#selectid(String)
+2020-05-24 16:18:52.923 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:18:52.924 [http-nio-8011-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseData(statusCord=200, message=响应成功, gotoPage=false, url=null, data=[Gather(id=12, gatherId=RK (truncated)...]
+2020-05-24 16:18:52.927 [http-nio-8011-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2020-05-24 16:34:13.868 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/stock/getStocks", parameters={}
+2020-05-24 16:34:13.870 [http-nio-8011-exec-10] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-05-24 16:34:13.876 [http-nio-8011-exec-10] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-05-24 16:34:13.877 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-05-24 16:34:13.877 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2020-05-24 16:34:13.878 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-05-24 16:34:13.879 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:34:13.879 [http-nio-8011-exec-10] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sun May 24 16:34:13 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-05-24 16:34:13.880 [http-nio-8011-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-05-24 16:34:47.635 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/stock/getStocks", parameters={}
+2020-05-24 16:34:47.639 [http-nio-8011-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-05-24 16:34:47.642 [http-nio-8011-exec-2] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2020-05-24 16:34:47.642 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-05-24 16:34:47.643 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2020-05-24 16:34:47.643 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-05-24 16:34:47.644 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-05-24 16:34:47.644 [http-nio-8011-exec-2] DEBUG o.s.w.s.m.m.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Sun May 24 16:34:47 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-05-24 16:34:47.645 [http-nio-8011-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
