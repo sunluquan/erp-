@@ -15,7 +15,11 @@ public interface SafetystockMapper {
 	int addSafety(Safetystock safetystocks);	
 	int updatestockId(Safetystock stocks);
     
+<<<<<<< HEAD
 	Safetystock getAllsafetyById(String productId);
+=======
+	Safetystock getAllsafetyById(String safetystockId);
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
     
 	List<Safetystock> selectByReviewList();
 	

@@ -36,8 +36,11 @@ public class ProductionPlanDetail implements Serializable{
 	@TableField(exist = false)
 	private String product_unit;
 	@TableField(exist = false)
+<<<<<<< HEAD
 	private String message;
 	@TableField(exist = false)
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	private ProductionPlan productionPlan;
 	
 }

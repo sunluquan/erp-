@@ -6,7 +6,10 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+<<<<<<< HEAD
 import com.slq.pojo.production.ProductProfitLossDetail;
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 import com.slq.pojo.production.ProductionProcess;
 import com.slq.pojo.production.ProductionProcessMaterial;
 
@@ -25,8 +28,11 @@ public interface ProductionProcessMaterialMapper extends BaseMapper<ProductionPr
 
 	int batchUpdateRealAmount1(@Param("production_process_id")Integer production_process_id, @Param("list")List<ProductionProcessMaterial> productionProcessMaterials);
 
+<<<<<<< HEAD
 	int batchUpdateRenewAmount(@Param("production_process_id")Integer production_process_id,@Param("list") List<ProductProfitLossDetail> productProfitLossDetails);
 
 	List<ProductionProcessMaterial> getProductionProcessMaterialByManufactureId(Integer id);
 
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 }

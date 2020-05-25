@@ -1,5 +1,6 @@
 <template>
  <el-dialog id="updatestockchange" :before-close="close" width="61%" title="安全库存配置单" style="text-align: center;" :visible.sync="updatestockchange_selectstock_dialog_visible">
+<<<<<<< HEAD
   
 	<div id="box">
 		<el-form :inline="true" :model="safetystock" class="demo-form-inline" :label-position="labelPosition" label-width="130px">
@@ -7,18 +8,38 @@
 		    <el-input class="input" v-model="safetystock.product_id"></el-input>
 		  </el-form-item>
 		  <el-form-item label="产品名称:" prop="productname">
+=======
+  <div style="margin-left: 680px;">
+  	<el-button type="danger" size="mini" round @click="update()">确定</el-button>
+  	<el-button type="primary" size="mini" round @click="close()">返回</el-button>
+  </div>
+	<div id="box">
+		<el-form :inline="true" :model="safetystock" class="demo-form-inline" :label-position="labelPosition" label-width="130px">
+		  <el-form-item  label="产品编号:" style="padding-right: 160px;margin-top: 22px;" prop="productid">
+		    <el-input class="input" v-model="safetystock.productId"></el-input>
+		  </el-form-item>
+		  <el-form-item label="产品名称:" prop="productname" style="margin-top: 22px;">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		     <el-input  class="MyClass" v-model="safetystock.product_name"></el-input>
 		  </el-form-item>				  		 
 		</el-form>	
 		
 		<el-form :inline="true" :model="safetystock" class="demo-form-inline" :label-position="labelPosition" label-width="130px">
+<<<<<<< HEAD
 			<el-form-item label="库存报警下限数:" style="padding-right: 90px;" prop="minamount">
+=======
+			<el-form-item label="库存报警下限数:" style="padding-right: 160px;" prop="minamount">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			  <el-input class="MyClass" v-model="safetystock.minamount"></el-input>
 			</el-form-item>
 			<el-form-item label="库存报警上限数:" prop="maxamount">
 			   <el-input  class="MyClass" v-model="safetystock.maxamount"></el-input>
 			</el-form-item>
+<<<<<<< HEAD
 			<el-form-item label="设置B/N或S/N:" style="padding-right: 90px;">
+=======
+			<el-form-item label="设置B/N或S/N:" style="padding-right: 160px;">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			   <el-input  class="MyClass"></el-input>
 			</el-form-item>
 			<el-form-item label="设计人" prop="register"> 
@@ -51,7 +72,11 @@
 				</el-table-column>				
 			  </el-table>	
 			  
+<<<<<<< HEAD
 				<el-form-item label="审核人:" style="padding-right: 90px;" prop="register">
+=======
+				<el-form-item label="审核人:" style="padding-right: 160px;" prop="register">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				   <el-input  class="MyClass" v-model="safetystock.checker"></el-input>
 				</el-form-item>
 				
@@ -63,10 +88,13 @@
 				   </el-form-item>				   			  					
 		</el-form>	
 	</div>
+<<<<<<< HEAD
 	<div slot="footer" class="dialog-footer">	
 		<el-button size="mini" round @click="update()">确定</el-button>
 		<el-button size="mini" round @click="close()">返回</el-button>
 	</div>
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	</el-dialog>
 </template>
 
@@ -84,7 +112,11 @@
 		data() {			
 	     	return {
 				id:'',
+<<<<<<< HEAD
 				productId:'',
+=======
+				safetystockId:'',
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				dataPicke: new Date,
 				custom: 'custom',
 				productid:'',
@@ -120,8 +152,13 @@
 		},
 		
 		created(){			
+<<<<<<< HEAD
 			let productId=this.$route.params[Object.keys(this.$route.params)[0]];
 			this.productId=productId;
+=======
+			let safetystockId=this.$route.params[Object.keys(this.$route.params)[0]];
+			this.safetystockId=safetystockId;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			
 			console.log(this.$route);
 			this.updatestockchange_selectstock_dialog_visible = true;						
@@ -134,8 +171,13 @@
 				this.$router.go(-1)
 			},
 			getAllsafetyById(){
+<<<<<<< HEAD
 				let productId=this.productId;
 				this.$axios.get('api/safetystock/getAllsafetyById/'+this.productId).then(response=>{
+=======
+				//let safetystockId=this.safetystockId;
+				this.$axios.get('api/safetystock/getAllsafetyById/'+this.safetystockId).then(response=>{
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 						this.safetystock=response.data;									
 					})
 			},
@@ -146,6 +188,10 @@
 					})
 			},
 			update(){
+<<<<<<< HEAD
+=======
+				this.safetystock.safetystockId=this.safetystockId;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				this.$axios.post('/api/safetystock/updateStockChange',this.safetystock).then(response=>{
 						if(response.statusCord==200){
 							this.$message({
@@ -174,10 +220,17 @@
 	}
 </script>
 
+<<<<<<< HEAD
 <style>
 	#box{
 		width: 855px;
 		height: 430px;
+=======
+<style scoped="scoped">
+	#box{
+		width: 855px;
+		height: 480px;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		border:1px solid gray;
 	}
 	.MyClass input.el-input__inner{

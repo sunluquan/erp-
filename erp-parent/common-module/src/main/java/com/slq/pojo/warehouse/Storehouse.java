@@ -10,6 +10,10 @@ public class Storehouse implements Serializable{
 	private String  storeName;
 	private String  storeAddress;
 	private Integer use_type;
+<<<<<<< HEAD
+=======
+	private Integer maxamount;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	private Integer storeStatus;//0可用 1不可用
 	private String  storeRemark;//备注
 	private Integer  id;

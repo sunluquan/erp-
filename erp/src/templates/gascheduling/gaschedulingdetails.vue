@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
  <el-dialog id="gaschedulingdetails" :before-close="close" width="65%" title="入库调度单" style="text-align: center;" :visible.sync="gaschedulingdetails_gascheduling_dialog_visible">
   
 	<div id="box">					
@@ -82,6 +83,81 @@
 	     <el-button size="mini" round @click="updnum()">确定</el-button>
 		<el-button size="mini" round @click="close()">返回</el-button>
 	</div>
+=======
+ <el-dialog id="gaschedulingdetails" :before-close="close" width="61%" title="入库调度单" style="text-align: center;" :visible.sync="gaschedulingdetails_gascheduling_dialog_visible">
+    <div style="margin-left: 660px;">
+         <el-button type="danger" size="mini"  @click="updnum()">确定</el-button>
+    	<el-button type="primary" size="mini"  @click="close()">返回</el-button>
+    </div>
+	<div id="box">					
+		<el-form :inline="true" :model="scheduling" class="demo-form-inline" :label-position="labelPosition" label-width="100px">
+			<el-form-item  label="入库单编号:" style="padding-right: 100px;margin-top: 20px;" prop="gatherId">
+			  <el-input class="input" v-model="scheduling.gatherId"></el-input>
+			</el-form-item>
+			<el-form-item label="产品编号:" prop="materielid" style="margin-top: 20px;">
+			  <el-input  class="input" v-model="scheduling.productId"></el-input>
+			</el-form-item>
+			<el-form-item  label="产品名称:" style="padding-right: 100px;" prop="materielname">
+			   <el-input  class="input" v-model="scheduling.productName"></el-input>
+			</el-form-item>	
+			<el-form-item  label="成本单价:" >
+			   <el-input  class="input" v-model="scheduling.realCostPrice"></el-input>
+			</el-form-item>
+			<!-- {{scheduling.gatherDetails}} -->
+			<el-table :data="scheduling.gatherDetails" size="medium" :header-cell-style="{background:'whitesmoke'}"  border style="width: 94%;margin-left: 30px;">
+			    <el-table-column prop="sid" label="序号"  width="80px;">
+					<template slot-scope="scope">
+					<span>{{scope.row.sid}}</span>
+					</template>
+			    </el-table-column>	
+			    <el-table-column prop="storeName" label="库房名称"  >
+					<template slot-scope="scope">						
+							<el-select v-model="scope.row.sid" size="small" @change="storehouseChange">
+							     <el-option v-for="(storehouse,index) in warehousePage" v-bind:key="index"
+							      :label="storehouse.storeName" :value="storehouse.sid">
+							     </el-option>
+							</el-select>					
+					</template>					
+			    </el-table-column>
+				<el-table-column prop="storeAddress" label="存放地址" width="210px">		
+				    <template slot-scope="scope">
+						 <span>{{scope.row.storehouse|whetherShow('storeAddress')}}</span>
+				    </template>
+				</el-table-column>	
+				<el-table-column prop="amountSum" label="存储单元"  width="90px">
+					<template slot-scope="scope">			
+					</template>										
+				</el-table-column>		
+				<el-table-column prop="amountSum" label="当前可存储数量"  width="140px">
+					<template slot-scope="scope">	
+						<span>{{scope.row.storehouse|whetherShow('maxamount')}}</span> 						
+					</template>										
+				</el-table-column>
+				<el-table-column prop="amount"  label="本次入库数量"  width="120px">
+					<template slot-scope="scope">	
+				      <el-input class="MyClasssum" v-model="scope.row.amount" size="mini"></el-input>			      
+					</template>										
+				</el-table-column>
+			  </el-table>
+			  <br />			  			
+			
+			<el-form-item label="应入库总件数:" style="padding-right: 100px;" prop="register">
+				 <el-input class="input" v-model="scheduling.mustAmount"></el-input>
+			</el-form-item>						
+		    <el-form-item label="应入库总成本:" prop="registertime">		  	     						 
+			      <el-input class="input" v-model="scheduling.summoneys"></el-input>	 
+			</el-form-item>	
+			<el-form-item label="登记人:" style="padding-right: 157px;" prop="activeUser">			   
+			   <span>{{activeUser}}</span>
+			</el-form-item>	
+			<el-form-item label="登记时间:" prop="registertime">		  	     
+				<el-date-picker type="date" v-model="scheduling.registerTime" placeholder="选择日期" size="small" width="40px">						   
+			    </el-date-picker>
+			</el-form-item>																			
+		</el-form>
+	</div>
+	
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	</el-dialog>
 </template>
 
@@ -94,32 +170,60 @@
 				id:'',
 				dataPicke: new Date,
 				custom: 'custom',
+<<<<<<< HEAD
 				productId:'',				
 				amount:'',
 				labelPosition: 'right',				       
 				gaschedulingdetails_gascheduling_dialog_visible: false,			   								
 				scheduling:[],
 				schedulings:{},
+=======
+				productId:'',
+				nums:0,
+				moneys:0.0,
+				amount:'',
+				warehousePage:[],
+				labelPosition: 'right',				       
+				gaschedulingdetails_gascheduling_dialog_visible: false,			   								
+				scheduling:{},
+				
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				gather:{},
 				isadmin: 3,					
 		}
 		},
 		
 		created(){			
+<<<<<<< HEAD
 			let id=this.$route.params[Object.keys(this.$route.params)[0]];
 			this.id=id;			
+=======
+			let productId=this.$route.params[Object.keys(this.$route.params)[0]];
+			this.productId=productId;			
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			console.log(this.$route);
 			this.gaschedulingdetails_gascheduling_dialog_visible = true;						
 			this.getAllsafetyById();
 			//this.schedulingid.push(schedulingid);
+<<<<<<< HEAD
 		},
 		methods: {
+=======
+			this.searchWarehouse();
+		},
+		methods: {
+			storehouseChange(id){
+				let index=this.warehousePage.findIndex(item=>item.sid===sid);
+				this.scheduling.gatherDetails[0].storehouse=this.warehousePage[index];
+			},
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			close() {
 				this.gaschedulingdetails_gascheduling_dialog_visible = false;
 				this.$router.go(-1)
 			},
 			getAllsafetyById(){		
 				//let id=this.id;
+<<<<<<< HEAD
 				this.$axios.get('api/gather/getByidGather/'+this.id).then(response=>{
 						this.scheduling.push(response.data);
 					})
@@ -129,6 +233,21 @@
 				this.schedulings.id=this.id;
 				this.$axios.post('api/gather/updgatherDetailsNum',this.schedulings).then(response=>{
 					this.schedulings=response.data;
+=======
+			this.$axios.get('api/gather/getGatherSafetystock/'+this.productId).then(response=>{
+						this.scheduling=response.data;	
+						
+					})					
+				//this.$axios.get('api/gather/getByidGather/'+this.productId).then(response=>{
+				//		this.scheduling=response.data;												
+				//	})	
+			},			
+		    updnum(){
+				//this.scheduling.productId=this.productId;
+				//this.scheduling.sid=this.scheduling.gatherDetails.sid;
+				this.$axios.post('api/gather/updgathersum',this.scheduling).then(response=>{
+					this.scheduling=response.data;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 					 if(response.statusCord==200){
 					 	this.$message({
 					 	    showClose: true,
@@ -136,7 +255,12 @@
 					 	    type: 'success',
 					 		duration:2000
 					 	});
+<<<<<<< HEAD
 					 	this.close();
+=======
+					 this.gaschedulingdetails_gascheduling_dialog_visible = false;
+					 this.$router.go(-1);
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 					 }else{
 					 	this.$message({
 					 	    showClose: true,
@@ -144,6 +268,7 @@
 					 	    type: 'error',
 					 		duration:2000
 					 	});
+<<<<<<< HEAD
 					 }
 				});
 				
@@ -175,24 +300,67 @@
 				this.$router.go(-1);
 		},
 		
+=======
+						this.gaschedulingdetails_gascheduling_dialog_visible = false;
+						this.$router.go(-1);
+					 }
+				});				
+				
+		},
+		searchWarehouse(){
+			this.$axios.get('/api/gather/StorehousesGather/'+this.productId).then(response=>{
+					//this.scheduling=response.data;
+					this.warehousePage=response.data;
+					console.log(this.warehousePage);
+					this.scheduling.gatherDetails[0].sid=this.warehousePage[0].sid;
+					
+					this.scheduling.gatherDetails[0]['storehouse']=this.warehousePage[0];
+				})
+		},
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		},
 		
 		computed: {
 			activeUser() {
+<<<<<<< HEAD
 						return this.$store.getters.getActiveUser.user.uid;
+=======
+						return this.$store.getters.getActiveUser.user.uname;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				},
 			routerNames() {
 						return this.$store.getters.getRouterNames;
 			}			
+<<<<<<< HEAD
+=======
+		},filters:{
+			whetherShow(obj, property, message) {
+				if (message == undefined || message == '')
+					message = "无"
+				if (obj == '' || obj == null) {
+					return message;
+				}
+				if (obj[property] == '' || obj[property] == null)
+					return message;
+				return obj[property];
+			},
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		}
 				
 	}
 </script>
 
+<<<<<<< HEAD
 <style>
 	#box{
 		width: 855px;
 		height: 500px;
+=======
+<style scoped="scoped">
+	#box{
+		width: 855px;
+		height: 400px;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		border:1px solid gray;
 	}
 	.MyClass input.el-input__inner{

@@ -16,7 +16,11 @@
 			</el-form>						
 		</el-row> 
 		
+<<<<<<< HEAD
 		   <el-table :data="reviewPage" border style="width: 100%" :border="true" :highlight-current-row="true">
+=======
+		   <el-table :data="reviewPage" border style="width: 100%" :border="true" :highlight-current-row="true" :header-cell-style="{background:'whitesmoke'}">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			   
 			  <el-table-column prop="safetystockId" width="230px" label="配置单编号" :sortable="custom" >
 				  <template slot-scope="scope">
@@ -56,7 +60,11 @@
 			  </el-table-column>
 			  <el-table-column prop="date" label="审核" width="100px">
 				  <template slot-scope="scope">
+<<<<<<< HEAD
 				  <el-button type="text" @click="reviewsheet(scope.row.productId)">复核</el-button>
+=======
+				  <el-button type="text" @click="reviewsheet(scope.row.safetystockId)">复核</el-button>
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				  </template>
 			  </el-table-column>
 		    </el-table>
@@ -98,8 +106,13 @@
 			     			alert('请求失败')
 			          })
 					},
+<<<<<<< HEAD
 					reviewsheet(productId){
 				     	this.$router.push({path:'/index/review.html/reviewsheet/'+productId})
+=======
+					reviewsheet(safetystockId){
+				     	this.$router.push({path:'/index/review.html/reviewsheet/'+safetystockId})
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 					},
 				/*	  	 								
 	  	 		//cx(){

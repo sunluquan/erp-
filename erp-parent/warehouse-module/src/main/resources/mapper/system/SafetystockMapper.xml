@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<<<<<<< HEAD
 <mapper namespace="com.slq.mapper.SafetystockMapper">
+=======
+<mapper namespace="com.slq.mapper.warehouse.SafetystockMapper">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 
 	<select id="getAllsafety" resultType="Safetystock">
 		SELECT * FROM safetystock
@@ -10,10 +14,16 @@
       select s.safetystockId,s.productId,s.minamount,s.maxamount,s.sid,s.maxCapacityAmount,
       s.storeUnit,s.register,s.registertime,s.checker,s.checktime,
       s.checktag,s.configStatus,s.changeStatus,
+<<<<<<< HEAD
       p.id,p.product_id,p.product_name,h.storeName 
       from safetystock s,product p,storehouse h where
       s.productId=p.product_id and s.sid=h.sid and s.productId=#{productId}
 	
+=======
+      p.id,p.product_id,p.product_name,h.storeName,h.storeAddress
+      from safetystock s,product p,storehouse h where
+      s.productId=p.product_id and s.sid=h.sid and s.safetystockId=#{safetystockId}	
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
      </select>
 	
 	<insert id="addSafety">
@@ -45,7 +55,11 @@
 	<update id="updateChecktag">
 	  UPDATE safetystock set				
 		checker=#{checker},checktime=now(),checktag='审核未通过',configStatus='未完成'
+<<<<<<< HEAD
 		WHERE id=#{id}
+=======
+		WHERE safetystockId=#{safetystockId}
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	</update>
 <!-- 
 (p.productname like "%"#{String}"%" or s.registertime like "%"#{String}"%")
@@ -59,7 +73,11 @@
 	<update id="updateSefeStatus">
 		UPDATE safetystock set				
 		checker=#{checker},checktime=now(),checktag='审核通过',configStatus='完成'
+<<<<<<< HEAD
 		WHERE productId=#{productId}				    			
+=======
+		WHERE safetystockId=#{safetystockId}				    			
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	</update>
 	<!-- 审核通过，传过来的值为1 <if test="checktag==1">		    	
 		    </if>-->		    		    
@@ -68,7 +86,11 @@
 				checktag=2,configstatus=2,checker=#{checker},checktime=NOW()
 			</if> -->
 	<select id="selectSafetystocks" resultType="Safetystock"> 
+<<<<<<< HEAD
 	 select s.id,s.safetystockId,s.productId,p.product_id,p.product_name,s.configStatus,s.checktag
+=======
+	 select s.id,s.safetystockId,s.productId,s.registertime,p.product_id,p.product_name,s.configStatus,s.checktag
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	  from safetystock s,product p
 	  where s.productId=p.product_id 
 	</select>
@@ -103,7 +125,12 @@
 	  and p.product_kind_id=k.id and s.checktag='审核通过' 
 	</select>
 	<update id="updateStockChange">
+<<<<<<< HEAD
 	  update safetystock set minamount=#{minamount},maxamount=#{maxamount},sid=#{sid},maxCapacityAmount=#{maxCapacityAmount},
 	  storeUnit=#{storeUnit},register=#{register},checker=#{checker},checktag='等待审核',configStatus='未完成',changeStatus='已变更'  where id=#{id}
+=======
+	  update safetystock set minamount=#{minamount},maxamount=#{maxamount},maxCapacityAmount=#{maxCapacityAmount},
+	  storeUnit=#{storeUnit},register=#{register},checker=#{checker},checktag='等待审核',configStatus='未完成',changeStatus='已变更'  where safetystockId=#{safetystockId}
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	</update>	
 </mapper>

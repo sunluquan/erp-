@@ -53,10 +53,14 @@ public class ProductionProcess implements Serializable{
 	private Float cost_price;//单位工时成本
 	private Integer demand_amount;//工序投产数量
 	private Integer real_amount;//工序合格数量
+<<<<<<< HEAD
 	//工序完成标志状态:0可以登记的状态 1完成
 		//2登记了但是当前工序未完成的审核中 
 		//3当前工序完成的审核中
 	private Integer process_finish_tag;
+=======
+	private Integer process_finish_tag;//工序完成标志0: 未开始1: 已完成2: 未完成 3: 已审核 4审核中 5审核未通过
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	private Integer process_transfer_tag;//工序交接标志0: 未交接1: 已审核(已交接) 2: 未审核 
 	@TableField(exist = false)
 	private ProductionProcessCourse productionProcessCourse;

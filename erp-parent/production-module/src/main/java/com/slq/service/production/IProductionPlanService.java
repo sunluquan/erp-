@@ -22,7 +22,10 @@ public interface IProductionPlanService {
 
 	int update(ProductionPlan productionPlan);
 
+<<<<<<< HEAD
 	List<ProductionPlan> getMeetDespatchingProductionPlans();
 
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 
 }

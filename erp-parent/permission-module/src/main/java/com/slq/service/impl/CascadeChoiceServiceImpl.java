@@ -45,11 +45,14 @@ public class CascadeChoiceServiceImpl implements ICascadeChoiceService{
 	public List<Template> getCascadeTemplates() {
 		return FileUtil.getTemplates();
 	}
+<<<<<<< HEAD
 	//@Cacheable(keyGenerator = "keyGenerator")
 	@Override
 	public List<CascadeChoice> getCascadeProductKind() {
 		return cascadeChoiceMapper.getCascadeProductKind();
 	}
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 
 	
 }

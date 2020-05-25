@@ -13,7 +13,11 @@ import com.github.pagehelper.PageInfo;
 import com.slq.common.Params;
 import com.slq.exception.NotToBeDeletedException;
 import com.slq.pojo.warehouse.Dept;
+<<<<<<< HEAD
 import com.slq.service.warehouse.IDeptService;
+=======
+import com.slq.service.IDeptService;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 import com.slq.util.DefaultResponseData;
 import com.slq.util.ResponseData;
 

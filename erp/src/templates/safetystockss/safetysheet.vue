@@ -1,5 +1,6 @@
 <template>
  <el-dialog id="safetysheet" :before-close="close" width="61%" title="安全库存配置单" style="text-align: center;" :visible.sync="safetysheet_safetystock_dialog_visible">
+<<<<<<< HEAD
   
 	<div id="box">
 		<el-form :inline="true" :model="safetystock" :label-position="labelPosition" label-width="130px">
@@ -7,6 +8,18 @@
 		    <el-input class="input" v-model="safetystock.product_id"></el-input>
 		  </el-form-item>
 		  <el-form-item label="产品名称:" prop="product_name">
+=======
+  <div style="margin-left: 680px;">
+  	<el-button type="danger" size="mini" round  v-on:click="insert()">提交</el-button>
+  	<el-button type="primary" size="mini" round @click="close()">返回</el-button>
+  </div>
+	<div id="box">
+		<el-form :inline="true" :model="safetystock" :label-position="labelPosition" label-width="130px">
+		  <el-form-item  label="产品编号:" style="padding-right: 90px;margin-top: 30px;" prop="product_id">
+		    <el-input class="input" v-model="safetystock.product_id"></el-input>
+		  </el-form-item>
+		  <el-form-item label="产品名称:" prop="product_name" style="margin-top: 30px;">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		     <el-input  class="MyClass" v-model="safetystock.product_name"></el-input>
 		  </el-form-item>				  		 
 		</el-form>	
@@ -28,8 +41,12 @@
 			    <el-table-column prop="id" label="序号"  >				
 			    </el-table-column>	
 			    <el-table-column prop="sid" label="仓库"  >
+<<<<<<< HEAD
 					<template slot-scope="scope">
 						
+=======
+					<template slot-scope="scope">						
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 						<el-select v-model="safetystocks.sid" size="small">
 						      <el-option v-for="(storehouse,index) in warehousePage" v-bind:key="index"
 						       :label="storehouse.storeName" :value="storehouse.sid">
@@ -50,6 +67,7 @@
 					</template>
 				</el-table-column>				
 			  </el-table>	
+<<<<<<< HEAD
 			  
 				<el-form-item label="登记人:" style="padding-right: 120px;" prop="activeUser">
 				   <span>{{activeUser}}</span>
@@ -59,14 +77,29 @@
 						 </el-date-picker>
 				   </el-form-item>
 				   <el-form-item label="配置要求:" style="padding-right: 80px;">
+=======
+			  <br />
+				<el-form-item label="登记人:" style="padding-right: 160px;" prop="activeUser">
+				   <span>{{activeUser}}</span>
+				</el-form-item>	
+				   <el-form-item label="登记时间:" prop="registertime">		  	     
+						 <el-date-picker type="date" v-model="safetystocks.registertime" placeholder="选择日期" size="small">						   
+						 </el-date-picker>
+				   </el-form-item>
+				   <el-form-item label="配置要求:" style="padding-right: 0px;">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				      <el-input type="textarea" style="width: 599px;"></el-input>
 				   </el-form-item>				   
 		</el-form>	
 	</div>
+<<<<<<< HEAD
 	<div slot="footer" class="dialog-footer">
 		<el-button size="small" round  v-on:click="insert()">提交</el-button>
 		<el-button size="mini" round @click="close()">返回</el-button>
 	</div>
+=======
+	
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	</el-dialog>
 </template>
 
@@ -146,7 +179,11 @@
 			insert(){
 				        this.safetystocks.productId=this.safetystock.product_id;
 						this.$axios.post('/api/safetystock/addSafety',this.safetystocks).then(response => {
+<<<<<<< HEAD
 							   alert('来了');							   
+=======
+							   							   
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 							    let responseData=response.data;
 								this.res=response.data;
 								
@@ -177,7 +214,11 @@
 			},
 			update(){
 				this.$axios.post('/api/safetystock/updateChecktag',this.safetystocks).then(response =>{
+<<<<<<< HEAD
 					alert('随机数');
+=======
+					
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				})
 			},selectProList(){			
 	  	 			this.$axios.post('/api/product/selectProList').then(response=>{
@@ -203,10 +244,17 @@
 	}
 </script>
 
+<<<<<<< HEAD
 <style>
 	#box{
 		width: 855px;
 		height: 430px;
+=======
+<style scoped="scoped">
+	#box{
+		width: 855px;
+		height: 475px;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		border:1px solid gray;
 	}
 	.MyClass input.el-input__inner{

@@ -1,7 +1,10 @@
 package com.slq.controller.production;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +24,10 @@ import com.slq.pojo.production.ProductionProcessCourse;
 import com.slq.service.production.IProductionProcessCourseService;
 import com.slq.util.DefaultResponseData;
 import com.slq.util.ResponseData;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 @RestController
 @RequestMapping("/api/productionProcessCourse")
 public class ProductionProcessCourseController {
@@ -35,13 +41,17 @@ public class ProductionProcessCourseController {
 		int i = productionProcessCourseService.register(manufacture);
 		return DefaultResponseData.successResponseData(i);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 //	@GetMapping("/byProcessIdAndmanufactureId")
 //	public ResponseData getProductionProcessCourseByProcessIdAndmanufactureId(Integer manufacture_id,String process_id) {
 //		ProductionProcessCourse productionProcessCourse = productionProcessCourseService.getProductionProcessCourseByProcessIdAndmanufactureId(manufacture_id,process_id);
 //		return DefaultResponseData.successResponseData(productionProcessCourse);
 //	}
 	@GetMapping("/byProcessIdAndmanufactureId")
+<<<<<<< HEAD
 	public ResponseData getProductionProcessCourseByProcessIdAndmanufactureId(Integer manufacture_id,
 			Integer production_process_id, String process_id) {
 		ProductionProcessCourse productionProcessCourse = productionProcessCourseService
@@ -68,4 +78,20 @@ public class ProductionProcessCourseController {
 				.productionProcessCoursebyManufactureIdAndProcessId(manufacture_id, process_id);
 		return DefaultResponseData.successResponseData(productionProcessCourses);
 	}
+=======
+	public ResponseData getProductionProcessCourseByProcessIdAndmanufactureId(Integer manufacture_id,Integer production_process_id,String process_id) {
+		ProductionProcessCourse productionProcessCourse = productionProcessCourseService.getProductionProcessCourseByProcessIdAndmanufactureId(manufacture_id,production_process_id,process_id);
+		System.out.println(JSON.toJSONString(productionProcessCourse));
+		return DefaultResponseData.successResponseData(productionProcessCourse);
+	}
+	//产品登记得审核
+	@PostMapping("/checker")
+	public ResponseData checker(@RequestBody ManufactureSum manufacture) {
+		System.out.println(JSON.toJSONString(manufacture));
+		//返回true 说明没有需要审核的登记和交接了
+		boolean fals = productionProcessCourseService.checker(manufacture);
+		return DefaultResponseData.successResponseData(fals);
+	}
+	
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 }

@@ -220,8 +220,12 @@ public  class GatherServiceImpl extends ServiceImpl<GatherMapper, Gather> implem
 		 String remark=null;				//备注
 		 String register=user.getUid();
 		 Date registerTime=new Date();		//登记时间
+<<<<<<< HEAD
 		Gather gather=new Gather
 				(gatherId, stockid, storer, reasonexact, amountSum, costPriceSum, gatheredAmountSum, remark, register, registerTime);
+=======
+		 Gather gather=new Gather(gatherId, stockid, storer, reasonexact, amountSum, costPriceSum, gatheredAmountSum, remark, register, registerTime);				
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		this.baseMapper.insert(gather);
 		Integer id=gather.getId();
 		if(id>0) {
@@ -237,7 +241,11 @@ public  class GatherServiceImpl extends ServiceImpl<GatherMapper, Gather> implem
 			 Integer payTag=WarehouseConstant.NO_PAY_TAG;
 			 GatherDetails gatherDetails=new GatherDetails(productId, productName, realCostPrice, subtotal, mustAmount, payTag);
 			 gatherDetailsList.add(gatherDetails);
+<<<<<<< HEAD
 			 gatherDetailService.batchInsertFinishedGatherDetail(id,gatherDetailsList);
+=======
+			 gatherDetailService.batchInsertFinishedGatherDetail(gatherId,gatherDetailsList);
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			 return id;
 		}
 		throw new RuntimeException();

@@ -41,8 +41,13 @@
 		//查看生产工序过程
 		props: {
 			manufacture: {
+<<<<<<< HEAD
 				type: Object,
 				default: () => ({})
+=======
+				type: Number,
+				default: () => (null)
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			},
 		},
 		data() {

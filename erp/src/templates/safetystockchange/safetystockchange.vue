@@ -16,7 +16,11 @@
 			</el-form>						
 		</el-row> 
 		
+<<<<<<< HEAD
 		   <el-table :data="changePage" border style="width: 100%" :border="true" :highlight-current-row="true">
+=======
+		   <el-table :data="changePage" border style="width: 100%" :border="true" :highlight-current-row="true" :header-cell-style="{background:'whitesmoke'}">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			   
 			  <el-table-column prop="safetystockId" width="235px" label="配置单编号" :sortable="custom" >
 				  <template slot-scope="scope">
@@ -57,7 +61,11 @@
 			  </el-table-column>
 			  <el-table-column prop="date" label="变更" width="100px">
 				  <template slot-scope="scope">
+<<<<<<< HEAD
 				  <el-link type="primary" @click="change(scope.row.productId)">变更</el-link>
+=======
+				  <el-link type="primary" @click="change(scope.row.safetystockId)">变更</el-link>
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				  </template>
 			  </el-table-column>
 		    </el-table>
@@ -99,8 +107,13 @@
 			     			alert('请求失败')
 			          })
 					},
+<<<<<<< HEAD
 					change(productId){
 				     	this.$router.push({path:'/index/safetystockchange.html/updatestockchange/'+productId})
+=======
+					change(safetystockId){
+				     	this.$router.push({path:'/index/safetystockchange.html/updatestockchange/'+safetystockId})
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 					},
 				/*	  	 								
 	  	 		//cx(){

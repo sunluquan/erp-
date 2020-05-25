@@ -57,19 +57,29 @@ public class ProductionProcessCourseServiceImpl extends
 		ProductionProcessCourse productionProcessCourse = manufacture.getProductionProcessCourse();
 		// 生产工序表
 		ProductionProcess productionProcess = manufacture.getProductionProcess1();
+<<<<<<< HEAD
 		//生产工序物料过程集合
 		List<ProductionProcessMaterial> productionProcessMaterials = productionProcess
 				.getProductionProcessMaterials();
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		Integer manufacture_id = manufacture.getId();
 		User user = ((ActiveUser) SecurityUtils.getSubject().getPrincipal()).getUser();
 		// 未完成的审核状态
 		Integer process_finish_tag = productionProcess.getProcess_finish_tag();//
+<<<<<<< HEAD
 		//只有当这道工序的没有物料的时候才会根据前端传过来的状态
 		//如何审核为完成时的审核的话
 		if (process_finish_tag != null && process_finish_tag == ProductionConstant.FINISH_CHECK_PROCESS_FINISH_TAG) {
 			//那么当前工序就设置状态为完成时候的审核状态
 			//process_finish_tag=P roductionConstant.FINISH_CHECK_PROCESS_FINISH_TAG;
 		} else {   
+=======
+		// 如何审核为完成时的审核的话
+		if (process_finish_tag != null && process_finish_tag == ProductionConstant.FINISH_CHECK_PROCESS_FINISH_TAG) {
+
+		} else {
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			// 将它设置为未完成的审核状态
 			process_finish_tag = ProductionConstant.UNFINISHED_CHECK_PROCESS_FINISH_TAG;
 		}
@@ -106,7 +116,12 @@ public class ProductionProcessCourseServiceImpl extends
 		Integer productionProcessCourse_id = productionProcessCourse1.getId();
 		System.out.println("productionProcessCourse_id:" + productionProcessCourse_id);
 		if (productionProcessCourse_id != null && productionProcessCourse_id > 0) {
+<<<<<<< HEAD
 			
+=======
+			List<ProductionProcessMaterial> productionProcessMaterials = productionProcess
+					.getProductionProcessMaterials();
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			System.out.println("productionProcessMaterials!=null&&!productionProcessMaterials.isEmpty():"
 					+ productionProcessMaterials != null && !productionProcessMaterials.isEmpty());
 			// 因为有些工序不需要使用使用物料啥的
@@ -206,8 +221,22 @@ public class ProductionProcessCourseServiceImpl extends
 		updateWrapper.set(ProductionProcessCourse::getCheck_tag, check_tag);
 		updateWrapper.eq(ProductionProcessCourse::getId, productionProcessCourse.getId());
 		int i = this.baseMapper.update(null, updateWrapper);
+<<<<<<< HEAD
 		
 		Integer process_finish_tag = null;
+=======
+
+		// 设置状态又为可登记状态
+		Integer process_finish_tag = null;
+		// 如果当前工序状态为已经完成的状态的审核中的话
+		if (productionProcess.getProcess_finish_tag() == ProductionConstant.FINISH_CHECK_PROCESS_FINISH_TAG) {
+			// 设置当前工序为完成状态
+			process_finish_tag = ProductionConstant.FINISH_PROCESS_FINISH_TAG;
+		} else {
+			// 又设置为当前工序为可以登记的状态
+			process_finish_tag = ProductionConstant.NOT_START_PROCESS_FINISH_TAG;
+		}
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		// 总的工时数为已有工时数+新增的工时数
 		// Float
 		// real_labour_hour_amount=productionProcess.getReal_labour_hour_amount()+productionProcess.getLabour_hour_amount();
@@ -226,14 +255,18 @@ public class ProductionProcessCourseServiceImpl extends
 		//实际工时价格也是一样
 		Float real_module_subtotal = 0f;
 		if (productionProcessMaterials != null && !productionProcessMaterials.isEmpty()) {
+<<<<<<< HEAD
 			//如果当前工序的所有从库存领取的物料都使用完了之后
 			//才会将当前工序状态修改为已完成的状态
 			boolean isFinish=true;
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			for (ProductionProcessMaterial productionProcessMaterial : productionProcessMaterials) {
 				//实际物料成本 =当前登记的物料使用数量*物料的价格
 				real_module_subtotal += 
 						productionProcessMaterial.getProductionProcessMaterialCourse().getUse_amount()
 						*productionProcessMaterial.getCost_price();
+<<<<<<< HEAD
 				//当前物料使用的总数量 ：已使用的数量+当前审核时候使用的数量
 				//这里可能会出现数据不同步问题
 				//原因：productionProcessMaterial.getRenew_amount()的值可能和数据库的值不同
@@ -272,6 +305,8 @@ public class ProductionProcessCourseServiceImpl extends
 			}else {
 				// 又设置为当前工序为可以登记的状态
 				process_finish_tag = ProductionConstant.NOT_START_PROCESS_FINISH_TAG;
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			}
 		}
 		//当前登记的工序的实际工时价格
@@ -311,6 +346,7 @@ public class ProductionProcessCourseServiceImpl extends
 		}
 	}
 
+<<<<<<< HEAD
 	@Override
 	public List<ProductionProcessCourse> productionProcessCoursebyManufactureIdAndProcessId(Integer manufacture_id,
 			String process_id) {
@@ -320,4 +356,6 @@ public class ProductionProcessCourseServiceImpl extends
 		return this.baseMapper.selectList(queryWrapper);
 	}
 
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 }

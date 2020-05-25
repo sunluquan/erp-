@@ -21,7 +21,11 @@ public class GatherDetailServiceImpl extends ServiceImpl<GatherDetailMapper,Gath
 	@CacheEvict(allEntries = true)
 	@Transactional
 	@Override
+<<<<<<< HEAD
 	public int batchInsertFinishedGatherDetail(Integer id, List<GatherDetails> gatherDetailsList) {
+=======
+	public int batchInsertFinishedGatherDetail(String id, List<GatherDetails> gatherDetailsList) {
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		if(!gatherDetailsList.isEmpty()&&gatherDetailsList.size()==1) {
 			GatherDetails gatherDetails = gatherDetailsList.get(0);
 			gatherDetails.setParentId(id);
@@ -31,6 +35,10 @@ public class GatherDetailServiceImpl extends ServiceImpl<GatherDetailMapper,Gath
 		}
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	
 
 }

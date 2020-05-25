@@ -17,6 +17,7 @@
 			</el-form>						
 		</el-row> 
 		
+<<<<<<< HEAD
 		   <el-table :data="selectPage" border style="width: 100%" :border="true" :highlight-current-row="true">
 			   
 			  <el-table-column prop="safetystockId" width="350px" label="配置单编号" :sortable="custom">
@@ -25,6 +26,16 @@
 				  </template>
 			  </el-table-column>
 		      <el-table-column prop="productid" width="270px" label="产品编号" :sortable="custom">
+=======
+		   <el-table :data="selectPage" border style="width: 100%" :border="true" :highlight-current-row="true" :header-cell-style="{background:'whitesmoke'}">
+			   
+			  <el-table-column prop="safetystockId" width="270px" label="配置单编号" :sortable="custom">
+				  <template slot-scope="scope">
+					  <el-link @click="selectdetails(scope.row.safetystockId)"><span>{{ scope.row.safetystockId }}</span></el-link> 	
+				  </template>
+			  </el-table-column>
+		      <el-table-column prop="productid" width="210px" label="产品编号" :sortable="custom">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				  <template slot-scope="scope">
 				  	<span>{{ scope.row.product_id }}</span>
 					
@@ -36,14 +47,27 @@
 				  		{{ scope.row.product_name }}</span>
 				  </template>
 		      </el-table-column>
+<<<<<<< HEAD
 		     
 			  <el-table-column prop="configStatus"   label="配置单状态">
+=======
+		     <el-table-column prop="registertime" label="登记时间" :sortable="custom" width="220px">
+		     		<template slot-scope="scope">
+		     		     <span>{{ scope.row.registertime }}</span>
+		     		</template>
+		     </el-table-column>
+			  <el-table-column prop="configStatus"   label="配置单状态" :sortable="custom">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				  <template slot-scope="scope">
 				  	<span style="color: #409EFF;">
 				  		{{ scope.row.configStatus }}</span>
 				  </template>
 			  </el-table-column>
+<<<<<<< HEAD
 			  <el-table-column prop="checktag"  label="复核状态" >
+=======
+			  <el-table-column prop="checktag"  label="复核状态" :sortable="custom">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				  <template slot-scope="scope">
 				  	<span style="color: #409EFF;">
 				  		{{ scope.row.checktag }}</span>
@@ -92,8 +116,13 @@
 			     			alert('请求失败')
 			          })
 					},
+<<<<<<< HEAD
 					selectdetails(productId){
 				           this.$router.push({path:'/index/selectstock.html/selectstockdetails/'+productId})
+=======
+					selectdetails(safetystockId){
+				           this.$router.push({path:'/index/selectstock.html/selectstockdetails/'+safetystockId})
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 					},
 					search(){
 						if(this.productName!=''){

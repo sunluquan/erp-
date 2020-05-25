@@ -3,16 +3,22 @@ package com.slq.controller.warehouse;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 import org.springframework.stereotype.Service;
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSON;
+<<<<<<< HEAD
 import com.baomidou.mybatisplus.core.injector.methods.SelectById;
 import com.slq.common.Params;
 import com.slq.pojo.production.Product;
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 import com.slq.pojo.warehouse.Storehouse;
 import com.slq.service.IWarehouseService;
 import com.slq.service.production.IProductService;

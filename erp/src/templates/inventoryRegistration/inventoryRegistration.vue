@@ -14,7 +14,11 @@
 		</el-row> 
 		
 		   <el-table :border="true" :highlight-current-row="true" style="width: 100%" :data="registrationPage"  border
+<<<<<<< HEAD
 		   :default-sort = "{prop: 'sort', order: 'ascending'}" @sort-change="sortChange">
+=======
+		   :default-sort = "{prop: 'sort', order: 'ascending'}" @sort-change="sortChange" :header-cell-style="{background:'whitesmoke'}">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		      <el-table-column prop="gatherId" label="入库单编号" :sortable="custom" width="220px">
 				  <template slot-scope="scope">
 				  	{{scope.row.gatherId}}

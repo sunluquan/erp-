@@ -11,6 +11,9 @@ public interface ICascadeChoiceService {
 
 	List<Template> getCascadeTemplates();
 
+<<<<<<< HEAD
 	List<CascadeChoice> getCascadeProductKind();
 
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.github.pagehelper.PageInfo;
@@ -16,6 +17,15 @@ import com.slq.mapper.warehouse.SafetystockMapper;
 import com.slq.pojo.production.Product;
 import com.slq.pojo.warehouse.GatherDetails;
 import com.slq.pojo.warehouse.Safetystock;
+=======
+
+import com.slq.mapper.warehouse.SafetystockMapper;
+import com.slq.mapper.warehouse.StockMapper;
+import com.slq.mapper.warehouse.WarehousingMapper;
+import com.slq.pojo.warehouse.GatherDetails;
+import com.slq.pojo.warehouse.Safetystock;
+import com.slq.pojo.warehouse.Stock;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 import com.slq.service.warehouse.ISafetystockServive;
 import com.slq.pojo.User;
 import com.slq.util.ActiveUser;
@@ -27,8 +37,13 @@ public class SafetystockServiveImpl implements ISafetystockServive {
 
 	@Autowired
 	SafetystockMapper safetystockMapper;
+<<<<<<< HEAD
 	@Autowired GatherMapper mapper;
 	
+=======
+	@Autowired WarehousingMapper mapper;
+	@Autowired StockMapper stockmapper;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	
 	@Override
 	public List<Safetystock> getAllsafety() {
@@ -49,11 +64,24 @@ public class SafetystockServiveImpl implements ISafetystockServive {
 	@Override
 	public int updateSefeStatus(Safetystock safetystock) {		
 		User user=((ActiveUser)SecurityUtils.getSubject().getPrincipal()).getUser();
+<<<<<<< HEAD
 		safetystock.setChecker(user.getUname());	
 		GatherDetails gatherDetails=new GatherDetails();
 		gatherDetails.setSid(safetystock.getSid());
 		gatherDetails.setProductId(safetystock.getProductId());
 		mapper.updGatherDetailsSid(gatherDetails);
+=======
+		Stock stock=new Stock();
+		safetystock.setChecker(user.getUname());	
+		GatherDetails gatherDetails=new GatherDetails();
+		//gatherDetails.setSid(safetystock.getSid());
+		//gatherDetails.setProductId(safetystock.getProductId());
+		//mapper.updGatherDetailsSid(gatherDetails);
+		stock.setProductId(safetystock.getProductId());
+		stock.setSid(safetystock.getSid());
+		stock.setRegistMan(user.getUname());
+		stockmapper.addStock(stock);
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		return safetystockMapper.updateSefeStatus(safetystock);
 	}
 

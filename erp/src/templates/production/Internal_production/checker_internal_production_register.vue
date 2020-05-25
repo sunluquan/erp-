@@ -5,7 +5,11 @@
 		v-model="checker_dialog_visible"
 		@renewal="renewal"
 		></checker-production-register>
+<<<<<<< HEAD
 		<el-table @row-dblclick="checker" :border="true"
+=======
+		<el-table  :border="true"
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		 ref="internalProduction_table" :highlight-current-row="true" style="width: 100%"
 		  :data="manufactures"
 		 :default-sort="{prop:'manufacture_id',order:'descending'}">

@@ -2,16 +2,26 @@
  <el-dialog id="selectstockdetails" :before-close="close" width="61%" title="安全库存配置单" style="text-align: center;" :visible.sync="selectstockdetails_selectstock_dialog_visible">
   
 	<div id="box">
+<<<<<<< HEAD
 		<el-form :inline="true" :model="safetystock" class="demo-form-inline" :label-position="labelPosition" label-width="130px">
 		  <el-form-item  label="产品编号:" style="padding-right0: 90px;" prop="productid">
 		    <el-input class="input" v-model="safetystock.product_id"></el-input>
 		  </el-form-item>
 		  <el-form-item  label="产品名称:" prop="productName">
 		     <el-input  class="MyClass" v-model="safetystock.product_name"></el-input>
+=======
+		<el-form :inline="true" :model="safetystock" class="demo-form-inline" :label-position="labelPosition" label-width="180px">
+		  <el-form-item  label="产品编号:" style="padding-right: 30px;margin-top: 17px;" prop="productid">
+		    <el-input class="input" v-model="safetystock[0].productId"></el-input>
+		  </el-form-item>
+		  <el-form-item  label="产品名称:" prop="productName" style="margin-top: 17px;">
+		     <el-input  class="input" v-model="safetystock[0].product_name"></el-input>
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		  </el-form-item>				  		 
 		</el-form>	
 		
 		<el-form :inline="true" :model="safetystock" class="demo-form-inline" :label-position="labelPosition" label-width="130px">
+<<<<<<< HEAD
 			<el-form-item label="库存报警下限数:" style="padding-right: 90px;" prop="minamount">
 			  <el-input class="MyClass" v-model="safetystock.minamount"></el-input>
 			</el-form-item>
@@ -63,6 +73,59 @@
 	<div slot="footer" class="dialog-footer">		
 		<el-button size="mini" round @click="close()">返回</el-button>
 	</div>
+=======
+			<el-form-item label="库存报警下限数:" style="padding-right: 30px;" prop="minamount">
+			  <el-input class="input" v-model="safetystock[0].minamount"></el-input>
+			</el-form-item>
+			<el-form-item label="库存报警上限数:" prop="maxamount">
+			   <el-input  class="input" v-model="safetystock[0].maxamount"></el-input>
+			</el-form-item>
+			<el-form-item label="设置B/N或S/N:" style="padding-right: 30px;">
+			   <el-input  class="input"></el-input>
+			</el-form-item>
+			<el-form-item label="设计人" prop="register"> 
+			   <el-input  class="input" v-model="safetystock[0].register"></el-input>
+			</el-form-item>
+			
+			<el-table :data="safetystock" size="medium" :header-cell-style="{background:'whitesmoke'}"  border style="width: 93%;margin-left: 40px;">
+				
+			    <el-table-column prop="id" label="序号" >
+			    </el-table-column>	
+			    <el-table-column prop="sid" label="仓库"  >
+			    	<template slot-scope="scope">
+			    		<span>{{scope.row.storeName}}</span>
+			    	</template>					
+			    </el-table-column>
+			    <el-table-column prop="storeAddress" label="库存地址" width="240px;">		
+			    			<template slot-scope="scope">
+			    			{{scope.row.storeAddress}}
+			    			</template>
+			    </el-table-column>
+			    <el-table-column prop="maxCapacityAmount" label="最大存储量"  >
+			    	<template slot-scope="scope">
+			    		{{scope.row.maxCapacityAmount}}
+			    	</template>										
+			    </el-table-column>
+			    <el-table-column prop="address" label="存储单位" >
+			    	<template slot-scope="scope">
+			    		{{scope.row.storeUnit}}
+			    	</template>
+			    </el-table-column>				
+			  </el-table>	
+			  <br />
+				<el-form-item label="审核人:" style="padding-right: 30px;" prop="register">
+				   <el-input  class="input" v-model="safetystock[0].checker"></el-input>
+				</el-form-item>
+				
+				   <el-form-item label="登记时间:" prop="registertime">		  	     						 
+					<el-input  class="input" v-model="safetystock[0].registertime"></el-input>		 
+				   </el-form-item>
+				   <el-form-item label="配置要求:" style="padding-right: 0px;">
+				      <el-input type="textarea" style="width: 530px;"></el-input>
+				   </el-form-item>				   			  					
+		</el-form>	
+	</div>
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	</el-dialog>
 </template>
 
@@ -81,7 +144,11 @@
 	     	return {					
 				dataPicke: new Date,
 				custom: 'custom',
+<<<<<<< HEAD
 				productId:'',
+=======
+				safetystockId:'',
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				labelPosition: 'right',				       
 				selectstockdetails_selectstock_dialog_visible: false,
 			   
@@ -102,7 +169,11 @@
 					registertime:'',					
 				},
 				isadmin: 3,	
+<<<<<<< HEAD
 				safetystock: {},	
+=======
+				safetystock:[],	
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 					res:{
 						id:'',
 					},
@@ -113,8 +184,13 @@
 		},
 		
 		created(){			
+<<<<<<< HEAD
 			let productId=this.$route.params[Object.keys(this.$route.params)[0]];
 			this.productId=productId;
+=======
+			let safetystockId=this.$route.params[Object.keys(this.$route.params)[0]];
+			this.safetystockId=safetystockId;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			
 			console.log(this.$route);
 			this.selectstockdetails_selectstock_dialog_visible = true;						
@@ -126,9 +202,15 @@
 				this.$router.go(-1)
 			},
 			getAllsafetyById(){
+<<<<<<< HEAD
 				let productId=this.productId;
 				this.$axios.get('api/safetystock/getAllsafetyById/'+this.productId).then(response=>{
 						this.safetystock=response.data;						
+=======
+				//let productId=this.productId;
+				this.$axios.get('api/safetystock/getAllsafetyById/'+this.safetystockId).then(response=>{
+						this.safetystock.push(response.data);						
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 					})
 			},
 				
@@ -136,10 +218,17 @@
 	}
 </script>
 
+<<<<<<< HEAD
 <style>
 	#box{
 		width: 855px;
 		height: 430px;
+=======
+<style scoped="scoped">
+	#box{
+		width: 855px;
+		height: 460px;
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		border:1px solid gray;
 	}
 	.MyClass input.el-input__inner{

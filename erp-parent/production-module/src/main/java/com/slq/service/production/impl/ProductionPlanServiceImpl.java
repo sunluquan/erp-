@@ -149,6 +149,7 @@ public class ProductionPlanServiceImpl extends ServiceImpl<ProductionPlanMapper,
 		}
 		throw new RuntimeException(message);
 	}
+<<<<<<< HEAD
 	////获取满足制定派工单的生产计划
 	@Cacheable(keyGenerator = "keyGenerator")
 	@Override
@@ -156,6 +157,8 @@ public class ProductionPlanServiceImpl extends ServiceImpl<ProductionPlanMapper,
 		
 		return this.baseMapper.getMeetDespatchingProductionPlans();
 	}
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	
 
 }

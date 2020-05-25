@@ -7,8 +7,11 @@
 		 :min="min"
 		 :max="max"
 		 controls-position="right"
+<<<<<<< HEAD
 		 :step-strictly="step_strictly"
 		 :step="step"
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		 @change="update"></el-input-number>
 	</div>
 </template>
@@ -32,12 +35,15 @@
 			},max:{
 				type:Number,
 				default:()=>(Infinity)
+<<<<<<< HEAD
 			},step_strictly:{
 				type:Boolean,
 				default:()=>(false)
 			},step:{
 				type:Number,
 				default:()=>(1)
+=======
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			}
 		},
 		data(){

@@ -1,11 +1,19 @@
 <template>
 	<el-dialog :before-close="close" title="查看生产制定单" :visible.sync="dialog_visible">
+<<<<<<< HEAD
 		<view-production-process-course
 		:production_process="activeProductionProcess"
 		v-model="viewProcessCourseDialogVisible"
 		@set_cache_material="setCacheMaterial"
 		@get_cache_material="getCacheMaterial">
 		</view-production-process-course>
+=======
+		<process-material-view 
+		:id="id"
+		v-model="processMaterialView"
+		@get_cache_material="getCacheMaterial"
+		@set_cache_material="setCacheMaterial"></process-material-view>
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		<div id="columns">
 			<el-form label-position="left" inline class="demo-table-expand">
 				<el-form-item label="派工单编号: ">
@@ -16,6 +24,10 @@
 				</el-form-item>
 			</el-form>
 		</div>
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		<div id="columns">
 			<el-form label-position="left" inline class="demo-table-expand">
 				<el-form-item label="产品编号: ">
@@ -26,6 +38,10 @@
 				</el-form-item>
 			</el-form>
 		</div>
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		<div id="columns">
 			<el-form label-position="left" inline class="demo-table-expand">
 				<el-form-item label="投产数量: ">
@@ -39,6 +55,7 @@
 		<br />
 		<!-- :summary-method="getSummaries" 
 		-->
+<<<<<<< HEAD
 		<el-table @row-dblclick="viewProcessCourse" 
 		:summary-method="getSummaries" show-summary 
 		:border="true" ref="material_design" 
@@ -52,6 +69,10 @@
 					</view-production-process-course>
 				</template>
 			</el-table-column> -->
+=======
+		<el-table :summary-method="getSummaries" show-summary :border="true" ref="material_design" :highlight-current-row="true"
+		 style="width: 100%" :data="productionProcess" :default-sort="{prop: 'details_number', order: 'ascending'}">
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			<el-table-column label="工序执行顺序" prop="details_number" sortable>
 				<template slot-scope="scope">
 					{{scope.row.details_number}}
@@ -112,7 +133,11 @@
 			</el-table-column>
 			<el-table-column label="操作" prop="total">
 				<template slot-scope="scope">
+<<<<<<< HEAD
 					<el-button type="primary" title="查看生产工序过程" @click="viewProcessCourse(scope.row)" icon="el-icon-view" circle></el-button>
+=======
+					<el-button type="primary" :disabled="scope.row.material_tag==0" :title="scope.row.material_tag==0?'无工序物料信息':'查看工序物料信息'" @click="processMaterialViewMethod(scope.row.id)" icon="el-icon-view" circle></el-button>
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 				</template>
 			</el-table-column>
 		</el-table>
@@ -157,7 +182,11 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 	import view_production_process_course from '@/components/manufacture/view_production_process_course.vue'
+=======
+	import process_material_view from '@/components/dispatching/view_process_material.vue'
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 	export default{
 		name:'view_manufacture',
 		model:{
@@ -174,10 +203,18 @@
 		},
 		data(){
 			return{
+<<<<<<< HEAD
 				cacheMaterial:{},
 				productionProcess:[],
 				viewProcessCourseDialogVisible:false,
 				activeProductionProcess:{}
+=======
+				processDetails:[],
+				id:null,
+				processMaterialView:false,
+				cacheMaterial:{},
+				productionProcess:[]
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			}
 		},methods:{
 			getCacheMaterial(id,callback){
@@ -188,6 +225,7 @@
 					}
 				}
 				callback([])
+<<<<<<< HEAD
 			},setCacheMaterial(id,data){
 				if(this.cacheMaterial instanceof Map == false){
 					this.cacheMaterial=new Map()
@@ -197,6 +235,17 @@
 			viewProcessCourse(data){
 				this.activeProductionProcess=data;
 				this.viewProcessCourseDialogVisible=true;
+=======
+			},setCacheMaterial(data){
+				if(this.cacheMaterial instanceof Map == false){
+					this.cacheMaterial=new Map()
+				}
+				this.cacheMaterial.set(this.id,data)
+			},
+			processMaterialViewMethod(id){
+				this.id=id
+				this.processMaterialView=true
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 			},
 			getProductionProcess(){
 				let manufacture_id = this.manufacture.id
@@ -313,9 +362,23 @@
 			manufacture_id(newVal){
 				this.getProductionProcess()
 			}
+<<<<<<< HEAD
 		},updated() {
 		},components:{
 			'view-production-process-course':view_production_process_course
+=======
+			// product_id(newVal){
+			// 	if(newVal){
+			// 		this.getProcessDetails()
+			// 	}
+			// }
+		},updated() {
+			// if(this.processDetails.length==0&&this.manufacture.product_id){
+			// 	this.getProcessDetails()
+			// }
+		},components:{
+			'process-material-view':process_material_view
+>>>>>>> 2bf7a0da52f72433bd88fc6a5792af2603a1b10d
 		}
 	}
 </script>
