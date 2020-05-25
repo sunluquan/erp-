@@ -3,10 +3,12 @@
 		<router-view></router-view>
 		<el-row type="flex" class="row-bg" justify="space-around">
 			<el-form :inline="true" class="demo-form-inline">				
-				<el-form-item label="产品建档日期">
-					<el-input  placeholder="产品建档日期"></el-input>
-				</el-form-item>
-				
+				<el-form-item label="入库理由">
+					<el-input  placeholder="入库理由"></el-input>
+				</el-form-item>	
+				<el-form-item label="入库登记时间">
+					<el-input  placeholder="登记时间"></el-input>
+				</el-form-item>			
 				<el-form-item>					
 					<el-button native-type="button" v-on:click.prevent="cx()"  type="primary" icon="el-icon-search">搜索</el-button>
 				</el-form-item>

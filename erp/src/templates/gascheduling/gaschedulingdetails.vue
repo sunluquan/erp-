@@ -60,7 +60,7 @@
 				 <el-input class="input" v-model="scheduling.mustAmount"></el-input>
 			</el-form-item>						
 		    <el-form-item label="应入库总成本:" prop="registertime">		  	     						 
-			      <el-input class="input" v-model="scheduling.subtotal"></el-input>	 
+			      <el-input class="input" v-model="scheduling.summoneys"></el-input>	 
 			</el-form-item>	
 			<el-form-item label="登记人:" style="padding-right: 157px;" prop="activeUser">			   
 			   <span>{{activeUser}}</span>
@@ -138,7 +138,8 @@
 					 	    type: 'success',
 					 		duration:2000
 					 	});
-					 	this.close();
+					 this.gaschedulingdetails_gascheduling_dialog_visible = false;
+					 this.$router.go(-1);
 					 }else{
 					 	this.$message({
 					 	    showClose: true,
@@ -146,41 +147,17 @@
 					 	    type: 'error',
 					 		duration:2000
 					 	});
+						this.gaschedulingdetails_gascheduling_dialog_visible = false;
+						this.$router.go(-1);
 					 }
-				});
+				});				
 				
-				/*alert(this.scheduling[0].gatherId);
-				this.gather.gatherId=this.scheduling[0].gatherId;
-				this.gather.amountSum=this.schedulings.amount;
-				alert(this.gather.amountSum);				
-				this.gather.costPriceSum=this.scheduling[0].realCostPrice*this.schedulings.amount;				
-				this.$axios.post('api/gather/updgathernum',this.gather).then(response=>{
-					alert('入库进来了');
-					 if(response.statusCord==200){
-					 	this.$message({
-					 	    showClose: true,
-					 	    message: '入库调度成功!',
-					 	    type: 'success',
-					 		duration:2000
-					 	});
-					 	this.close();
-					 }else{
-					 	this.$message({
-					 	    showClose: true,
-					 	    message: '入库调度失败!',
-					 	    type: 'error',
-					 		duration:2000
-					 	});
-					 }
-				})*/
-				this.gaschedulingdetails_gascheduling_dialog_visible = false;
-				this.$router.go(-1);
 		},
 		searchWarehouse(){
 			this.$axios.get('/api/gather/StorehousesGather/'+this.productId).then(response=>{
 					//this.scheduling=response.data;
 					this.warehousePage=response.data;
-					console.log(this.warehousePage)
+					console.log(this.warehousePage);
 					this.scheduling.gatherDetails[0].sid=this.warehousePage[0].sid;
 					
 					this.scheduling.gatherDetails[0]['storehouse']=this.warehousePage[0];

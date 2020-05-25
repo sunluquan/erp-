@@ -50,9 +50,9 @@ public class SafetystockServiveImpl implements ISafetystockServive {
 		Stock stock=new Stock();
 		safetystock.setChecker(user.getUname());	
 		GatherDetails gatherDetails=new GatherDetails();
-		gatherDetails.setSid(safetystock.getSid());
-		gatherDetails.setProductId(safetystock.getProductId());
-		mapper.updGatherDetailsSid(gatherDetails);
+		//gatherDetails.setSid(safetystock.getSid());
+		//gatherDetails.setProductId(safetystock.getProductId());
+		//mapper.updGatherDetailsSid(gatherDetails);
 		stock.setProductId(safetystock.getProductId());
 		stock.setSid(safetystock.getSid());
 		stock.setRegistMan(user.getUname());

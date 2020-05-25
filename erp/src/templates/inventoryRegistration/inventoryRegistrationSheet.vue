@@ -152,7 +152,7 @@
 			updnum() {
 				this.$axios.post('/api/gather/register', this.registration).then(response => {
 					if (response.statusCord == 200) {
-						this.$message.success('产品登记成功');
+						this.$message.success('产品登记成功需要审核');
 					} else {
 						this.$message.error(response.data)
 					}

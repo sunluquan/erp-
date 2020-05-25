@@ -19,7 +19,7 @@ where s.productId=d.productId and s.sid=t.sid and d.sid=y.sid and d.productId=y.
 	</insert>
 	<insert id="updateStock">	
      <foreach collection="list" item="herDetailst" separator=";">
-       update stock set amount=amount+#{herDetailst.paidAmount},checkMan='孙陆泉',checkTime=now(),checkTag='已审核' 
+       update stock set amount=amount+#{herDetailst.paidAmount},sid=#{herDetailst.sid},checkMan='孙陆泉',checkTime=now(),checkTag='已审核' 
        where productId=#{herDetailst.productId} and sid=#{herDetailst.sid}
      </foreach>
     </insert>

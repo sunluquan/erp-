@@ -115,16 +115,8 @@
 					})
 			},
 			schedulingids(productId){
-				if(this.productId!=null){
-					this.$router.push({path: '/index/gascheduling.html/gaschedulingdetails/'+productId})
-				}else{
-					this.$message({
-					    showClose: true,
-					    message: '请进行安全库存配置!',
-					    type: 'danger',
-						duration:2000
-					});									
-				}								
+				
+					this.$router.push({path: '/index/gascheduling.html/gaschedulingdetails/'+productId})										
 			}				
 		},
 		computed:{

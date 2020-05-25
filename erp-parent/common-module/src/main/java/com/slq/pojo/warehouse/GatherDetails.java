@@ -1,6 +1,7 @@
 package com.slq.pojo.warehouse;
 
 import java.io.Serializable;
+import java.util.List;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -44,7 +45,7 @@ public class GatherDetails implements Serializable{
 		private Integer stockamount;//入库标志1:已登记2:已调度
 		private String storeName;
 		private String storeAddress;
-	    private	Storehouse storehouse;
+	    private Storehouse storehouse;
 		@TableField(exist = false)
 		private int qwe;
 		@TableField(exist = false)
@@ -52,4 +53,5 @@ public class GatherDetails implements Serializable{
 		@TableField(exist = false)
 		private String pid;
 		private Integer maxamount;
+		private double summoneys;
 }

@@ -42,12 +42,14 @@
 			  </el-table-column>
 			  <el-table-column prop="checkTag" label="审核状态" :sortable="custom">
 			  				  <template slot-scope="scope">
-			  				  	<el-button type="primary" plain>{{scope.row.checkTag}}</el-button>
+			  				  	<!-- <el-button type="primary" plain>{{scope.row.checkTag}}</el-button> -->
+								<span>{{scope.row.checkTags}}</span>
 			  				  </template>
 			  </el-table-column>
 			  <el-table-column prop="storeTag" label="库存标记" :sortable="custom">
 			  				  <template slot-scope="scope">
-			  				  	<el-button type="primary" plain>{{scope.row.storeTag}}</el-button>
+			  				  	<!-- <el-button type="primary" plain>{{scope.row.storeTag}}</el-button> -->
+								<span>{{scope.row.storeTags}}</span>
 			  				  </template>
 			  </el-table-column>
 		    </el-table>
@@ -59,7 +61,9 @@
 	export default {
 	 	name: 'invtRegstselect',
 		 data(){
-			 return {				
+			 return {
+				 checkTags:'',
+				 storeTags:'',
 			 	custom:'custom',
 			 	registrationPage:{},		 	
 			 	params:{
@@ -81,8 +85,21 @@
 	  	 		},
 	  	 		selectProList(){			
 	  	 			this.$axios.post('/api/gather/selectRegistration').then(response=>{
-	  	 				this.registrationPage=response.data;
-						
+	  	 				this.registrationPage=response.data;						 
+						 for(var a=0;this.registrationPage.length>a;a++){
+							 if(this.registrationPage[a].checkTag==1){
+								 this.registrationPage[a].checkTags='已审核';
+							 }else if(this.registrationPage[a].checkTag==2){
+								 this.registrationPage[a].checkTags='审核未通过';
+							 }else{
+								 this.registrationPage[a].checkTags='待审核';
+							 }
+						 	if(this.registrationPage[a].storeTag==1){
+						 		this.registrationPage[a].storeTags='已登记';					 	
+						 	}else{
+						 		this.registrationPage[a].storeTags='已调度';
+						 	}
+						 }						 
 	  	 				})
 	  	 		},	
 				selectdetails(gatherId){

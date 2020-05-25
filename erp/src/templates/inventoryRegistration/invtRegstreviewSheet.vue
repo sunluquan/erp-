@@ -21,7 +21,11 @@
 			   <el-input  class="MyClass"></el-input>
 			</el-form-item>
 			<el-table :data="registration.gatherDetails" size="small" :header-cell-style="{background:'whitesmoke'}"  border style="width: 97%;margin-left: 16px;">
-			    	
+			    <el-table-column prop="sid" label="序号"  width="113px;">
+			    	<template slot-scope="scope">
+			    	<span>{{scope.row.sid}}</span>
+			    	</template>
+			    </el-table-column>	
 			    <el-table-column prop="storeName" label="产品编号"  width="180px">
 					<template slot-scope="scope">
 						    <span>{{scope.row.productId}}</span>
@@ -52,11 +56,7 @@
 				      <el-input class="MyClasssum" v-model="scope.row.paidAmount" size="mini"></el-input>			      
 					</template>										
 				</el-table-column>
-				<el-table-column prop="sid" label="序号"  width="113px;">
-					<template slot-scope="scope">
-					<span>{{scope.row.sid}}</span>
-					</template>
-				</el-table-column>
+				
 			  </el-table>
 			  <br />
 			   <el-form-item label="应入库总件数" style="padding-right: 170px;">

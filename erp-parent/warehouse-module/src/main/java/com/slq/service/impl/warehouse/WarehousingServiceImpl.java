@@ -221,7 +221,6 @@ public  class WarehousingServiceImpl extends ServiceImpl<WarehousingMapper, Gath
 		User user=((ActiveUser)SecurityUtils.getSubject().getPrincipal()).getUser();
 		List<Stock> stocks=gather.getStocks();
 		gather.setChecker(user.getUname());
-		
 		List<GatherDetails> gatherDetailsList=gather.getGatherDetails();
 		GatherDetails gatherDetails=new GatherDetails();
 		gatherDetails.setProductId(gather.getProductId());
@@ -231,7 +230,9 @@ public  class WarehousingServiceImpl extends ServiceImpl<WarehousingMapper, Gath
 //		stocks.setAmount(gatherDetails.getPaidAmount());
 //		stocks.setRegistMan(user.getUname());
 //		stocks.setCheckMan(user.getUname());
-		stockmapper.updateStock(gatherDetailsList);
+		if(gather.getCheckTag()==1) {
+			stockmapper.updateStock(gatherDetailsList);
+		}		
 		return mapper.updcheck(gather);
 	}
 

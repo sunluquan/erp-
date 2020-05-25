@@ -192,7 +192,7 @@ export const permission_router = [{
 	
 				},
 				{
-					path: 'gaschedulingdetails/:id',
+					path: 'gaschedulingdetails/:productId',
 					component: gaschedulingdetails,
 				}
 			]
@@ -210,6 +210,16 @@ export const permission_router = [{
 					component: invtRegstselectSheet,
 					props: true
 				}				
+			]
+		},
+		{
+			path: 'invtRegstselect.html',
+			component: invtRegstselect,
+			children: [{
+					path: 'invtRegstselectSheet/:gatherId',
+					component: invtRegstselectSheet,
+		            props: true
+				},								
 			]
 		},
 			{
