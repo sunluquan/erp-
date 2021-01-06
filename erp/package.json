@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "css-loader": "^3.4.2",
     "element-ui": "^2.13.0",
     "file-loader": "^5.1.0",
